@@ -2,7 +2,10 @@ const express = require("express");
 const superagent = require("superagent");
 const app = express();
 require("dotenv").config();
+var cors = require("cors");
 const port = process.env.port || 5000;
+
+app.use(cors());
 
 const cities = [
   "Aba",
